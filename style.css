@@ -110,6 +110,7 @@ body {
     translate: -50% -50%;
     text-align: center;
 }
+
 .hero-text h1 {
     font-size: clamp(1.5rem, 5vw, 3rem);
     color: var(--secondary);
@@ -177,7 +178,7 @@ footer p {
     grid-template-columns: 1fr;
 }
 
-.menu-item img {
+.menu-item .image {
     grid-column: 1;
     width: 75%;
     grid-row: 1 / 4;
@@ -194,18 +195,21 @@ footer p {
 }
 
 .products h1,
-.products h2 {
+.products h2,
+.menu h1,
+.menu h2 {
     padding-bottom: 0;
 }
 
-.products {
+.products,
+.menu {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
 }
 
 @media (min-width: 700px) {
-    .menu-item img {
+    .menu-item .image {
         grid-column: 2;
     }
 
@@ -254,4 +258,31 @@ button {
     background-color: var(--primary);
     color: white;
     font-weight: bolder;
+}
+
+.menu-item-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.favorite-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem;
+    height: auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+.invalid {
+    border-color: red;
+}
+.error-message {
+    color: red;
 }
